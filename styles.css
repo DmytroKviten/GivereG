@@ -1,0 +1,578 @@
+/*Шапка сайту*/
+
+body {
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('slow/DancingScript-VariableFont_wght.ttf') format('woff2');
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+header {
+    position: relative;
+    display: flex;  
+    align-items: center;
+    padding: 5px 10px;
+    background-color: #D2B48C;
+    transition: top 0.3s;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* це допоможе впевнитись, що шапка завжди зверху */
+    margin: 0 auto; /* Центрування шапки */
+    height: 130px;
+}
+
+
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* відстань між елементами меню */
+    margin-left: 0;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 26px;
+    color: #000000;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+
+}
+
+.menu:hover {
+
+    background-color: rgba(0, 0, 0, 0.1); /* Припустимо, ви хочете додати легкий чорний фон */
+
+} 
+
+.logo1 {
+    width: auto; /* щоб не обмежувати ширину лого */
+    max-width: 260px; /* максимальна ширина лого */
+    height: auto;
+    margin-right: auto; /* автоматичний правий відступ, щоб відсунути кнопки вправо */
+    margin: 0 auto;
+    
+}
+.logo {
+
+    margin-right: 350px;  /* відступ з правої сторони між логотипом і кнопками */
+
+}
+button {
+    padding: 10px 20px;
+    font-size: 26px;
+    border: none;
+    background-color: transparent;  /* прозорий фон */
+    color: #000;
+    cursor: pointer;
+    margin: 0 10px;
+}
+.burger-icon {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 18px;
+    margin-left: 80px;
+   
+}
+.burger-icon span {
+    background: black;
+    height: 3px;
+    width: 100%;
+    display: block;
+}
+.mobile-menu-content {
+    
+    position: absolute;
+    top: 100%; 
+    left: calc(100% - 160px);
+    background-color: #fff;
+    border: 1px solid #ccc; /*рамка*/
+    width: 150px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    z-index: 1000;
+    flex-direction: column; 
+    align-items: start;
+    padding: 10px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    
+}
+.mobile-menu-content a {
+    /* стилі для пунктів меню */
+    text-decoration: none; 
+    color: black; 
+    padding: 5px 10px;
+    display: block; 
+    margin-bottom: 5px; 
+}
+.mobile-menu-content a:hover {
+    /* стилі для пунктів меню при наведенні */
+    background-color: #f7f7f7; 
+}
+.mobile-menu-content.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Обложка сайту */
+
+
+.fullscreen-image {
+    background-image: url('image/obloshka.png');
+    background-size: cover;     /* Щоб зображення покривало весь елемент */
+    background-position: center; /* Щоб зображення було вирівняно по центру */
+    height: 100vh;             /* Щоб висота зображення дорівнювала висоті вікна браузера */
+    width: 100%;               /* Щоб ширина зображення була на всю ширину */
+    position: relative;        /* Щоб мати можливість розміщувати інші елементи поверх цього */
+}
+
+.overlay-text {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    margin-top: 5px;
+    padding: 10px; /* Це лише приблизні координати. Ви можете їх налаштувати, щоб розташувати текст в потрібному вам місці */
+    bottom: 42%;
+    right: 10%;
+    font-size: 26px;
+    font-family: Dancing Script;
+}
+
+/* 3 частина сайту */
+
+.advantages-line2 {
+
+    border: none; /* Видаляємо стандартний бордер hr */
+    height: 5px; /* Висота лінії */
+    background-color: #333; /* Колір лінії */
+    width: 100%; /* Ширина лінії */
+    margin: 20px auto; /* Центруємо лінію горизонтально */
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #D2B48C;
+}
+
+h2 {
+    font-size: 40px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.left, .center, .right {
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.left-text, .center-text {
+    text-align: center;
+}
+
+
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.hr1 {
+
+    width: 350px;
+    height: 400px;
+    margin-bottom: 20px;
+
+}
+
+.hr2 {
+
+    width: 350px;
+    height: 400px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.hr3 {
+
+    width: 350px;
+    height: 400px;
+    margin-bottom: 20px;
+
+}
+
+.left-text {
+
+    align-items: center; /* Вирівнювання елементів по вертикалі */
+    text-align: center; /* Вирівнювання тексту по центру */
+    font-size: 18px;
+
+}
+
+.center-text {
+
+    align-items: center; /* Вирівнювання елементів по вертикалі */
+    text-align: center; /* Вирівнювання тексту по центру */
+    font-size: 18px;
+
+}
+
+.right-text {
+
+    align-items: center; /* Вирівнювання елементів по вертикалі */
+    text-align: center; /* Вирівнювання тексту по центру */
+    font-size: 18px;
+
+}
+
+/* 4 частина сайту */
+
+#advantages {
+    margin: 0;
+    padding: 60px 0;
+    width: 100%;
+    background-color: #D2B48C;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin: 0 0 20px;
+}
+
+#advantages .icons-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#advantages .icon-item {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+#advantages .advantage-icon {
+    height: 80px;
+    width: auto;
+    display: block;
+    margin: 0 auto; /* Центрування іконки */
+}
+
+#advantages .advantages-line {
+    border: none; /* Видаляємо стандартний бордер hr */
+    height: 2px; /* Висота лінії */
+    background-color: #333; /* Колір лінії */
+    width: 90%; /* Ширина лінії */
+    margin: 20px auto; /* Центруємо лінію горизонтально */
+}
+
+
+#advantages .advantages-text {
+    display: flex;
+    justify-content: space-around; /* Рівномірно розподіляє текстові блоки */
+    align-items: center; /* Вирівнювання по вертикалі */
+    margin-top: 20px; /* Відступ зверху після лінії */
+}
+
+#advantages .advantages-text span {
+    font-size: 20px; /* Розмір шрифту для тексту */
+    color: #333; /* Колір тексту */
+    /* Ви можете додати додаткові стилі, такі як шрифт, жирність, і т.д. */
+}
+
+
+#advantages .advantages-text span.shift-right {
+    margin-left: 35px; /* Відступ зліва */
+}
+
+#advantages .advantages-text span.shift-right2 {
+    margin-left: 28px; /* Відступ зліва */
+}
+
+#advantages .advantages-text span.shift-right3 {
+    margin-left: 3px; /* Відступ зліва */
+}
+
+#advantages .advantages-description {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Вирівнювання елементів зверху */
+    
+}
+
+#advantages .advantages-description .text-item {
+    padding: 0 70px;
+    flex: 0 1 auto; /* Не дозволяє блокам розтягуватися */
+    margin: 0 20px; /* Зовнішні відступи збоку */
+    max-width: calc(50% - 100px);
+}
+
+#advantages .advantages-description p {
+   
+    font-size: 16px;
+    color: #666;
+    text-align: left; /* Текст вирівнюється по лівому краю */
+    /* Додайте інші стилі за потреби */
+}
+
+#advantages .advantages-description .offset-left {
+    margin-left: -73px; /* Від'ємний маржин для зміщення тексту вліво */
+}
+
+
+
+
+
+
+
+
+/* 5 частина сайту */
+
+
+
+
+.custom-background {
+    width: 100%; /* Забезпечує, що секція розтягнута на всю ширину */
+    min-height: 500px; /* Мінімальна висота секції */
+    background-image: url('image/fn5.png'); /* Фонове зображення */
+    background-size: cover; /* Покриває всю область секції зображенням */
+    background-position: center; /* Центрує зображення */
+    background-repeat: no-repeat; /* Запобігає повторенню зображення */
+}
+
+
+#services {
+    text-align: center; /* Вирівнювання тексту по центру */
+    padding: 50px 20px; /* Відступи для секції */
+}
+
+.section-heading {
+    color: #000000	;
+    font-size: 30px; /* Великий розмір шрифту для заголовка */
+    margin: 0 0 20px; /* Відступ знизу для заголовка */
+}
+
+.heading-underline {
+    width: 100%; /* Ширина лінії під заголовком */
+    height: 3px; /* Висота лінії */
+    background-color: #333; /* Колір лінії */
+    margin: 0 auto 20px; /* Відступи навколо лінії */
+}
+
+.section-subheading {
+    color:#000000;
+    font-size: 24px; /* Розмір шрифту для підзаголовка */
+    font-weight: normal; /* Нормальна товщина шрифту */
+    margin: 0 0 20px; /* Відступ знизу для підзаголовка */
+}
+
+.section-description {
+    color: #000000	;
+    font-size: 20; /* Розмір шрифту для опису */
+    line-height: 1.6; /* Міжрядковий інтервал для опису */
+    max-width: 600px; /* Максимальна ширина тексту для кращої читабельності */
+    margin: 0 auto; /* Автоматичні відступи для центрування тексту */
+}
+
+
+
+
+.gallery-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px; /* Додайте відступ між рядами, якщо потрібно */
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    margin: 0 60px; /* Додайте відступ між картинками, якщо потрібно */
+    width: 320px; /* Встановіть ширину картинок */
+    height: 320px; /* Встановіть висоту картинок */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item-title {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-size: 1.5em;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+
+
+
+/* 6 частина сайту */
+
+#partners {
+    background-color: #D2B48C; /* Замініть на бажаний колір або */
+    width: 100%; /* забезпечує, що контейнер розтягується на всю ширину */
+    margin: 0; /* видаляє будь-які зовнішні відступи */
+    padding: 0; /* видаляє внутрішні відступи */
+} 
+
+/* Стилі для заголовку секції */
+.section-header {
+    font-size: 18px;
+    text-align: center;
+    padding: 20px;
+}
+
+.top-line, .bottom-line {
+    width: 85%;
+    margin: 10px auto;
+}
+
+/* Стилі для каруселі брендів */
+.brands-carousel {
+    max-width: 1200px; /* або конкретна ширина, наприклад 800px */
+    margin: auto; /* для центрування */
+    overflow: visible; /* запобігає виходу змісту за межі контейнера */
+}
+
+.brands-carousel .slick-slide {
+    padding: 10px; /* або інший розумний розмір */
+}
+
+
+.brands-carousel img {
+    width: 250px; /* Фіксована ширина для всіх зображень */
+    height: 200px; /* Фіксована висота для всіх зображень */
+    object-fit: cover; /* Запобігає спотворенню пропорцій */
+    display: block; /* Видалення будь-яких додаткових відступів */
+    margin: auto; /* Центрування зображення у слайді */
+}
+
+
+.brands-carousel .slick-prev:before,
+.brands-carousel .slick-next:before {
+    color: #000000 !important; /* змініть на потрібний колір */
+}
+
+.slick-prev,
+.slick-next {
+    font-size: 30px; /* Розмір стрілок */
+    line-height: 1;
+    opacity: 0.75;
+    background: black; /* Фон стрілок */
+    border-radius: 50%;
+    width: 30px; /* Ширина стрілок */
+    height: 30px; /* Висота стрілок */
+    z-index: 1000;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+    opacity: 1;
+}
+
+.slick-prev {
+    left: 50px; /* Позиціонування лівої стрілки */
+}
+
+.slick-next {
+    right: 50px; /* Позиціонування правої стрілки */
+}
+
+/* Стилі для індикаторів пагінації */
+.slick-dots {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.slick-dots li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 10px;
+    height: 10px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: #000000;
+    border-radius: 50%;
+}
+
+.slick-dots li.slick-active button {
+    background: #000000;
+}
+
+/* Стилі для контактної інформації */
+.contact-info {
+    font-size: 13px;
+    text-align: center;
+    padding: 20px;
+}
+
+.ending-line {
+    width: 83%;
+    margin: 10px auto;
+}
+
+

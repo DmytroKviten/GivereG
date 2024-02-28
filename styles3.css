@@ -1,0 +1,85 @@
+.fullscreen-image2 {
+    background-image: url('image3/fon1.png');
+    background-size: cover;     /* Щоб зображення покривало весь елемент */
+    background-position: center; /* Щоб зображення було вирівняно по центру */
+    height: 100vh;             /* Щоб висота зображення дорівнювала висоті вікна браузера */
+    width: 100%;               /* Щоб ширина зображення була на всю ширину */
+    position: relative;
+    z-index: -1;        /* Щоб мати можливість розміщувати інші елементи поверх цього */
+}
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-image: url('image3/fon1.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 200px; /* Відстань між зображеннями */
+    padding: 140px;
+}
+
+.gallery img {
+    width: 100%; /* зображення займають всю доступну ширину в клітинці сітки */
+    height: auto; /* зберігають пропорції */
+}
+
+
+.photo-container {
+    width: 400px;
+    height: 500px;
+    perspective: 1000px; /* Додає 3D-ефект при перевертанні */
+}
+
+.photo-front, .photo-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden; /* Приховує зворотню сторону при перевертанні */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.6s;
+}
+
+.photo-front {
+    background: #fff;
+}
+
+.photo-front img {
+    width: 100%;
+    height: auto;
+}
+
+.photo-back {
+    background: #cf9c37c6;
+    color: #fff;
+    transform: rotateY(180deg);
+}
+
+.photo-back p {
+
+text-align: center;
+font-size: 24px;
+
+}
+
+
+.photo-container:hover .photo-front {
+    transform: rotateY(-180deg);
+}
+
+.photo-container:hover .photo-back {
+    transform: rotateY(0deg);
+}
